@@ -1,2 +1,2 @@
 # jupyter_experiments
- A experimental repository for Python (and R) Jupyter notebooks
+An experimental repository of Jupiter notebooks, created to complement a basic Python programming course.
