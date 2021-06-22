@@ -1,0 +1,988 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Python - Guia do Programador},
+  pdfauthor={Peter Jandl Junior},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{Python - Guia do Programador}
+\author{Peter Jandl Junior}
+\date{2021-06-22}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{prefuxe1cio}{%
+\chapter*{Prefácio}\label{prefuxe1cio}}
+\addcontentsline{toc}{chapter}{Prefácio}
+
+Este é um livro experimental, organizado com o propósito de incentivar o uso da linguagem de programação Python e, sendo assim, procura cobrir os aspectos mais básicos de sua utilização, bem como alguns conceitos fundamentais e boas práticas da programação. Para tanto, apresenta os elementos básicos da linguagem, ao mesmo tempo que trata dos aspectos básicos da programação, prosseguindo para conceitos e técnicas mais avançados.
+
+Será utilizada a versão 3 do Python, que é substancialmente diferente da versão 2 e, também, considerada mais correta semanticamente falando, além de suportar um conjunto de novas e interessantes características.
+
+Este material foi escrito com \textbf{R Markdown} e uso do pacote \textbf{bookdown}\footnote{Bookdown no GitHub: \url{https://github.com/rstudio/bookdown}.} \citep{R-bookdown, xie2015}, portanto emprega o suporte do \textbf{Pandoc}, como, por exemplo, para indicar expressões matemáticas, tal como \(f(x) = a*x^2 + b*x + c\).
+
+O muitos fragmentos de código e exemplos contidos neste material aparecem como segue. Quando incluída, a saída produzida pelos fragmentos aparecerá precedida por dois caracteres de numeral (\texttt{\#\#}).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Uma mensagem de boas vindas}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Bem vindo ao "Python {-} Guia do Programador"!\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Bem vindo ao "Python - Guia do Programador"!
+\end{verbatim}
+
+Este material será futuramente armazenado no \textbf{GitHub}, no repositório: \url{https://github.com/pjandl/pygp}.
+
+\hypertarget{intro}{%
+\chapter{Introdução}\label{intro}}
+
+\textbf{Python} é uma linguagem de programação bastante popular, moderna, utilizada tanto no ambiente corporativo, como no meio acadêmico, e que todo programador devia conhecer. Segundo Kopec \citep[pág.1]{kop2019}:
+
+\begin{quote}
+``Python é usada em atividades tão diversas como ciência de dados, produção de filmes, educação em ciência da computação, gerenciamento de tecnologia da informação e muito mais. Realmente não há um ramo da computação que Python não tenha tocado (exceto, talvez, desenvolvimento de \emph{kernel} de sistemas operacionais). Python é amada por sua flexibilidade, sintaxa bela e suscinta, orientação a objetos pura, e uma comunidade movimentada.''
+\end{quote}
+
+Então, é muito necessário falar um pouco sobre ela.
+
+\hypertarget{introd-histo}{%
+\section{Breve Histórico}\label{introd-histo}}
+
+Observando as dificuldades de muitas pessoas em aprender a programar e trabalhar com programação, Guido Van Rossun, que então trabalhava no \emph{Stichting Mathematish Centrum}\footnote{CWI: \url{http://www.cwi.nl/}.} (Holanda), deu início ao desenvolvimento de uma nova linguagem de programação em 1990. Sua proposta era oferecer um linguagem de \emph{script} simples, fácil de aprender e de programar. O nome \textbf{Python} foi inspirado pelo grupo humorístico britânico \emph{Monty Python}, criador do programa de televisão \emph{Monty Python's Flying Circus}.
+
+Em 1995, já no \emph{Corporation for National Research Initiatives} (EUA), Rossun, deu continuidade ao seu projeto de tornar o Python ainda melhor, neste ponto com as opiniões e ajuda de várias outras pessoas contribuíram no desenvolvimento da linguagem e de suas bibliotecas.
+
+Para garantir a evolução contínua da linguagem e, ao mesmo tempo, desvincular o Python da pessoa de Guido Van Rossun, foi criada em 2001 a \emph{Python Software Foundation}\footnote{PSF: \url{https://www.python.org/psf/}.}, uma organização sem fins lucrativos, que detém os direitos de propriedade intelectual do Python, destinada a manter, desenvolver e divulgar a linguagem com base em um modelo de desenvolvimento comunitário, aberto, com participação de membros individuais e corporativos.
+
+Todas as versões do Python são de \emph{código aberto}\footnote{Veja uma definição de \emph{código aberto} ou \emph{open source} em \url{http://www.opensource.org/}.}.
+
+\hypertarget{introd-carac}{%
+\section{Características}\label{introd-carac}}
+
+Python é uma linguagem de programação de alto nível, orientada a objetos, interpretada, interativa, de semântica dinâmica, com tipagem forte. Sua sintaxe é bastante compacta e direta, o que possibilita aos seus programas serem mais curtos do que os construídos em C, C++, Java e outras linguagens.
+
+As razões para isso são:
+
+\begin{itemize}
+\tightlist
+\item
+  dispõe de tipos de dados de alto nível que permitem a expressão direta de operações complexas;
+\item
+  não requer a declaração prévia de variáveis ou argumentos, cujos tipos são inferidos durante a execução do programa;
+\item
+  a criação de blocos de diretivas nas suas construções requer apenas a indentação simples, sem necessidade de elementos extras, como chaves ou palavras reservadas, para identificação de início e fim de tais blocos.
+\end{itemize}
+
+Foi projetada para ser simples e elegante, ao mesmo que é sofisticada e completa, pois:
+
+\begin{itemize}
+\tightlist
+\item
+  é orientada a objetos, oferece herança simples, herança múltipla e tratamento polimórfico de objetos;
+\item
+  oferece exceções como mecanismo mais moderno para o tratamento de erros;
+\item
+  possui coleta automática de lixo, que efetua a reciclagem de memória de objetos descartados, simplificando o desenvolvimento;
+\item
+  inclui recursos avançados de manipulação de texto, listas e outras estruturas de dados; e
+\item
+  seus programas podem ser organizados em módulos e pacotes, reusáveis em diferentes programas.
+\end{itemize}
+
+Pode ser usada em múltiplas plataformas (Mac OS, Microsoft Windows, distribuições Linux e Unix), o que evidencia sua portabilidade\footnote{\emph{Portabilidade} é a capacidade dos programas gerados por uma linguagem de programação de serem executados em diferentes plataformas operacionais, idealmente sem alterações, ou com um mínimo de modificações.}. Além de ser extensível e dotada de uma ampla e versátil biblioteca.
+
+Como característica de seu projeto, a linguagem Python possui um interpretador que pode funcionar em modo interativo. Isto possibilita que programas escritos em Python, ou mesmo trechos de código, possam ser testados antes de serem compilados ou inclusos em outros programas. Com isso, o Python encoraja a programação de maneira simples, sem requisitar código burocrático, o que a torna muito conveniente para criação rápida de programas.
+
+Por tudo isso é muito utilizada para tratamento, processamento de visualização de dados em aplicações de Análise de Dados (\emph{Data Analysis}) e de Ciência de Dados (\emph{Data Science}). Mas tambem é empregada na construção de aplicações complexas e de grande porte em empresas icônicas como DropBox, Google, IBM, Instagram, Nasa, Reddit, Spotify, Uber, YouTube e outras.
+
+\hypertarget{introd-habil}{%
+\section{Habilidades da Programação}\label{introd-habil}}
+
+\emph{Programar}\footnote{Dicio (Dicionário On-Line de Português): \url{https://www.dicio.com.br/programar}.} significa \emph{fazer o programa de, planejar, incluir em programação}, além de ter como sinônimos \emph{planejar, projetar, delinear, designar e coordenar}.
+
+A programação de computadores exige o domínio de cinco habilidades distintas:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  computação (Capítulo \ref{comput}),
+\item
+  sequenciação (Capítulo \ref{seque}),
+\item
+  repetição (Capítulo \ref{repet}),
+\item
+  decisão (Capítulo \ref{decis}), e
+\item
+  modularização (Capítulo \ref{modul}).
+\end{enumerate}
+
+A \emph{computação} é habilidade necessária para expressar e realizar cálculos, ou seja, a capacidade de combinar valores, variáveis, operadores e funções para obter os resultados desejados. Esta habilidade explora as capacidades dos computadores em realizar cálculos.
+
+A \emph{sequenciação} se refere a habilidade de organizar as instruções de um programa de maneira tal que seja resolvido um problema específico, ou seja, se trata de estabelecer uma sequência adequada de instruções para solução de um problema, ou seja, a determina a \emph{lógica} com a qual resolvemos um problema. A sequenciação determina como os dados de um problema serão processados.
+
+A \emph{repetição} consiste da identificação de uma instrução ou um conjunto de instruções que devem ser executados mais de uma vez, o que inclui determinar o número de vezes que tais instruções serão executadas ou a condição que exige sua repetição. Além disso, a repetição permite reduzir a quantidade de instruções necessárias para resolver um problema, e confere maior flexibilidade às soluções criadas.
+
+Outra habilidade importante é a \emph{decisão}, pois possibilita escolher quais instruções serão executadas, isto é, permite que, durante a execução das instruções, sejam selecionadas aquelas que serão executadas. Esta decisão é realizada mediante a avaliação de uma condição que o programador estabelece como critério de escolha ou de seleção.
+
+Finalmente temos a \emph{modularização}, que é a habilidade que trata da divisão das instruções necessárias para resolução de um problema em partes menores, cada uma com responsabilidades distintas. Essa estratégia oferece várias vantagens, entre elas, simplificar a compreensão e solução do problema, além de possibilitar o reuso.
+
+\{::options parse\_block\_html=``true'' /\}
+
+\hypertarget{comput}{%
+\chapter{Computação}\label{comput}}
+
+A palavra \emph{computar}\footnote{Dicio (Dicionário On-Line de Português): \url{https://www.dicio.com.br/computar}.} significa \emph{fazer o cômputo de, calcular, orçar}, assim, a \emph{computação} é a habilidade da programação voltada para a realização de cálculos, o que permite explorar uma das capacidades centrais dos computadores.
+
+A realização de cálculos envolve a construção de \emph{expressões}, que podem conter vários elementos:
+
+\begin{itemize}
+\tightlist
+\item
+  valores literais,
+\item
+  operadores,
+\item
+  variáveis, e
+\item
+  funções.
+\end{itemize}
+
+\hypertarget{comput-liter}{%
+\section{Valores Literais}\label{comput-liter}}
+
+Um \emph{valor literal}, ou apenas \emph{literal}, é uma quantidade, um número, uma palavra, um nome ou um texto que podemos ler diretamente numa instrução, isto é, um elemento que não depende da execução da instrução ou de qualquer outra parte do programa para que possa ser compreendido. Alguns exemplos podem facilitar no entendimento do que são os literais.
+
+O número \texttt{2021} é um literal, assim como \texttt{15}, \texttt{3.14}, \texttt{-3} ou \texttt{4294967296} também são literais numéricos, que são escritos diretamente no texto do programa Python, tal como em todas as linguagens de programação. Vale notar que o \emph{separador} decimal é o caractere ponto (\texttt{.}).
+
+Já a inclusão de literais de texto no Python, seja uma palavra, frase ou um caractere individual, requer que sejam dispostos entre aspas simples (\texttt{\textquotesingle{}}) ou aspas duplas (\texttt{"}). Estes \emph{delimitadores} de texto podem ser usados para indicar palavras, como \texttt{\textquotesingle{}computador\textquotesingle{}} ou \texttt{"programação"}, e caracteres individuais, como \texttt{\textquotesingle{}A\textquotesingle{}}, \texttt{"x"}, \texttt{\textquotesingle{}!\textquotesingle{}}, \texttt{"@"} ou \texttt{\textquotesingle{}+\textquotesingle{}}. Pequenas frases, que não podem exceder uma linha, são indicadas da mesma maneira, ou seja, com uso destes delimitadores, como no fragmento que segue.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\textquotesingle{}Python é uma linguagem de programação moderna.\textquotesingle{}}
+\CommentTok{"A área de \textquotesingle{}data science\textquotesingle{} utiliza Python."}
+\CommentTok{\textquotesingle{}A linguagem Python é "interpretada" e "dinâmica".\textquotesingle{}}
+\end{Highlighting}
+\end{Shaded}
+
+Os delimitadores são exigidos para que seja possível distinguir o texto literal fornecidos pelo programador dos demais elementos da linguagem. O delimitador não pode fazer parte do texto delimitado, no entanto, é interessante observar que as aspas simples podem usadas quando delimitadas por aspas duplas e vice-versa.
+
+Também é possível definir texto literal com múltiplas linhas, com o uso triplo de aspas simples ou aspas duplas, o que pode ser conveniente em algumas situações, como por exemplo indicar comandos SQL\footnote{\emph{Structured Query Language}, linguagem padronizada para consulta e manipulação de dados em \emph{Sistemas Gerenciadores de Bancos de Dados Relacionais} (SGBDR).} usados pelo programa. Seguem exemplos diretos.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{"""Python is used in pursuits as diverse as data science,}
+\CommentTok{film{-}making, computer science education, IT management, }
+\CommentTok{and much more."""}
+
+\CommentTok{\textquotesingle{}\textquotesingle{}\textquotesingle{}There really is no computing field that Python has not }
+\CommentTok{touched (except maybe kernel development). Python is loved}
+\CommentTok{for its flexibility, beautiful and succinct syntax, }
+\CommentTok{object{-}oriented purity, and bustling community.}
+
+\CommentTok{{-}{-}{-} Kopec (2019)\textquotesingle{}\textquotesingle{}\textquotesingle{}}
+\end{Highlighting}
+\end{Shaded}
+
+Além de literais numéricos e de texto, o Python também dispõe de dois literais de tipo lógico (ou boleanos), que são \texttt{False} e \texttt{True}, que respectivamente representam os estados \emph{falso} e \emph{verdadeiro}.
+
+\hypertarget{comput-tipos}{%
+\section{Tipos de Dados}\label{comput-tipos}}
+
+A linguagem Python é capaz de lidar com vários tipos de dados, ou seja, com categorias distintas de valores, cada uma oferecendo um conjunto próprio de possibilidades. Os tipos de dados básicos disponíveis na linguagem são considerados tipos \emph{built-in}\footnote{O termo \emph{built-in} é utilizado para designar um elemento que faz parte da própria definição da linguagem, ou seja, está disponível em todos os programas, sem necessidade de importação de módulos ou pacotes.}, ou \emph{nativos}, e estão listados na Tabela 2.1.
+
+Tabela 2.1: Tipos de dados \emph{built-in}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.14}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.86}}@{}}
+\toprule
+Tipo & Descrição \\
+\midrule
+\endhead
+\texttt{int} & Inteiro (ou integral), valor númerico sem parte fracionária. \\
+\texttt{float} & Real, valor numérico com parte fracionária em ponto flutuante. \\
+\texttt{bool} & Lógico (ou boleano). \\
+\texttt{string} & \emph{String} ou cadeia de caracteres. \\
+\texttt{complex} & Número complexo, com a parte imaginária identificada pelo sufixo \texttt{j}. \\
+\bottomrule
+\end{longtable}
+
+O Python dispõe de três tipos de dados numéricos \emph{built-in}: \texttt{int}, \texttt{float} e \texttt{complex}. O tipo \texttt{int} possibilita a representação de valores numéricos inteiros, ou seja, números, contagens e quantidades, positivos ou negativos, mas sem uma parte fracionária. A função \emph{built-in} \texttt{type()} permite determinar o tipo de quaisquer valores literais (na verdade, de qualquer coisa no Python). Observe o uso de \texttt{type()} para o valor inteiro \texttt{15}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{type}\NormalTok{(}\DecValTok{15}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <class 'int'>
+\end{verbatim}
+
+Qualquer valor inteiro, quando avaliado por \texttt{type()}, produz como retorno a classe \texttt{int}, que representa este tipo de dados.
+
+Analogamente, o tipo \texttt{float} possibilita a representação de valores numéricos reais, ou seja, números positivos ou negativos dotados de uma parte fracionária. Como antes, pode ser usada a função \emph{built-in} \texttt{type()} para determinar o tipo de literais reais, como segue.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{type}\NormalTok{(}\FloatTok{3.14}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <class 'float'>
+\end{verbatim}
+
+Valores reais avaliados por \texttt{type()} produzem como retorno a classe \texttt{float}, que representa este tipo de dados.
+
+Diferente da grande maioria das linguagens de programação, Python permite a representação nativa de números complexos, ou seja, valores dotados de uma parte real e uma parte imaginária, que utiliza o sufixo \texttt{j} para diferenciá-la da parte real. No fragmento que segue, a função \texttt{type()} é utilizada para determinar o tipo do valor literal \texttt{1.5\ -\ 4.9j}, um número complexo cuja parte real tem valor \texttt{1.5} e a parte imaginária vale \texttt{4.9j}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{type}\NormalTok{(}\FloatTok{1.5} \OperatorTok{{-}} \OtherTok{4.9j}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <class 'complex'>
+\end{verbatim}
+
+A verificação de tipo com \texttt{type()} retorna a classe \texttt{complex} quando recebe números complexos como argumento.
+
+Outro importante tipo \emph{built-in} é \texttt{bool} que representa o tipo lógico ou boleano, que possui apenas dois valores possíveis: \texttt{False}, para valores falsos; e \texttt{True}, para valores verdadeiros. O uso de \texttt{type()} para o literal lógico \texttt{True} é mostrado no fragmento que segue.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{type}\NormalTok{(}\VariableTok{True}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <class 'bool'>
+\end{verbatim}
+
+Como esperado, é retornada a classe \texttt{bool}.
+
+Finalmente, a representação de texto, sejam caracteres, palavras ou frases, é feita por elementos do tipo \texttt{str}, à despeito do delimitador usado (aspas simples, duplas ou triplas). A função \texttt{type()} também permite determinar o tipo de literais ou valores de texto, como segue.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{type}\NormalTok{(}\StringTok{\textquotesingle{}Python: Guia do programador\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <class 'str'>
+\end{verbatim}
+
+Observamos que a classe \texttt{str} é retornada quando \texttt{type()} verifica o tipo do argumento de texto fornecido.
+
+\hypertarget{comput-opera}{%
+\section{Operadores}\label{comput-opera}}
+
+A utilidade dos computadores se deve, em grande parte, às suas capacidades de realizar cálculos. Então, as linguagens de programação devem suportar essas capacidades e, para isso, deve oferecer operadores que permitam combinar valores e variáveis (seção \ref{comput-varia}) para expressar as sequências de cálculos adequadas à obtenção dos resultados desejados.
+
+Como na matemática, um operador é um símbolo convencionado para representar uma operação específica entre seus operandos, isto é, os valores participantes desta operação. Existem quatro grupos principais de operadores\footnote{O Python também possui operadores bit-a-bit (ou \emph{bitwise}), que atuam sobre os bits que compõem os valores inteiros, mas que não serão tratados neste material.}, indicados na Tabela 2.2.
+
+Tabela 2.2: Grupos de operadores
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.14}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.86}}@{}}
+\toprule
+Grupo & Descrição \\
+\midrule
+\endhead
+Aritméticos & Destinados às operações algébricas comuns, como adição, subtração e outras. \\
+Relacionais & Possibilitam a comparação entre valores numéricos e não numéricos. \\
+Lógicos & Permitem a combinação de predicados lógicos. \\
+Atribuição & São usados para definir o valor de variáveis e parâmetros de funções. \\
+\bottomrule
+\end{longtable}
+
+Com o uso destes operadores, é possível realizar cálculos, comparar valores, avaliar condições e atribuir valores para variáveis, como será tratados nas seções que seguem.
+
+\hypertarget{comput-opera-aritm}{%
+\subsection{Operadores Aritméticos}\label{comput-opera-aritm}}
+
+Os operadores aritméticos são destinados à realização das operações algébricas de adição, subtração, multiplicação, divisão e potenciação, como relacionado na Tabela 2.3, onde podemos observar que a maior parte dos operadores aritméticos são idênticos aos usados na matemática, exatamente para facilitar sua identificação e emprego.
+
+Tabela 2.3: Operadores aritméticos
+
+\begin{longtable}[]{@{}clr@{}}
+\toprule
+Operador & Operação & Aridade\footnote{Na matemática a \emph{aridade} de uma função ou operação é o número de argumentos ou operandos tomados.} \\
+\midrule
+\endhead
+\texttt{+} & Adição (soma). & 2 \\
+\texttt{-} & Subtração (diferença). & 2 \\
+\texttt{*} & Multiplicação (produto). & 2 \\
+\texttt{/} & Divisão (quociente). & 2 \\
+\texttt{//} & Divisão inteira (quociente). & 2 \\
+\texttt{\%} & Resto da divisão inteira (módulo). & 2 \\
+\texttt{**} & Potenciação (exponenciação). & 2 \\
+\texttt{+} & Sinal positivo. & 1 \\
+\texttt{-} & Sinal negativo. & 1 \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{adiuxe7uxe3o}{%
+\subsubsection{Adição}\label{adiuxe7uxe3o}}
+
+Utilizamos o operador \texttt{+} para indicar a adição ou a soma, que requer dois operandos (sua aridade), ou seja, os dois valores que serão adicionados. No fragmento que segue é possível ver que o uso deste operador é simples.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{123} \OperatorTok{+} \DecValTok{456}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 579
+\end{verbatim}
+
+O operador \texttt{+} pode ser usado para somar qualquer combinação de valores inteiros e reais, além de obedecer as propriedades \emph{comutativa}\footnote{Propriedade \emph{comutativa}: a ordem dos operandos não altera o resultado, pois na adição temos que\\
+  \texttt{A\ +\ B\ =\ B\ +\ A}.}, \emph{associativa}\footnote{Propriedade \emph{associativa}: a associação dos operandos não modifica o resultado, pois na adição temos que\\
+  \texttt{A\ +\ B\ +\ C\ =\ (A\ +\ B)\ +\ C\ =\ A\ +\ (B\ +\ C)\ =\ (A\ +\ C)\ +\ B}.}, \emph{distributiva}\footnote{Propriedade \emph{distributiva}: realizamos o produto do termo externo ao parênteses com seus termos internos, ou seja, na adição \texttt{A\ *\ (B\ +\ C)\ =\ A\ *\ B\ +\ A\ *\ C}.} e do \emph{elemento nêutro}\footnote{\emph{Elemento nêutro}: valor que não modifica o resultado da operação, na adição ao somar zero não altera o resultado, pois \texttt{A\ +\ 0\ =\ A}.} da adição. A soma de valores inteiros produz resultados de tipo \texttt{int}, mas se combinados valores inteiros e reais, o resultado será de tipo \texttt{float}.
+
+Existe outro uso para o operador \texttt{+}, que é como sinal positivo, tal como \texttt{+5} ou \texttt{+19.12}, mas cujo uso é pouco frequente, pois por padrão, valores sem sinal são considerados positivos.
+
+\hypertarget{subtrauxe7uxe3o}{%
+\subsubsection{Subtração}\label{subtrauxe7uxe3o}}
+
+O operador \texttt{-} permite realizar a subtração ou a diferença entre dois valores, ou seja, requer dois operandos (sua aridade). Seu uso também é simples.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{654} \OperatorTok{{-}} \DecValTok{123}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 531
+\end{verbatim}
+
+O operador \texttt{-} pode efetuar a diferença de qualquer combinação de valores inteiros e reais, além de obedecer as propriedades \emph{distributiva}\footnote{Propriedade \emph{distributiva}: realizamos o produto do termo externo ao parênteses com seus termos internos, ou seja, na subtração \texttt{A\ *\ (B\ -\ C)\ =\ A\ *\ B\ -\ A\ *\ C}.} e do \emph{elemento nêutro}\footnote{\emph{Elemento nêutro}: valor que não modifica o resultado da operação, subtrair zero não altera o resultado, pois \texttt{A\ -\ 0\ =\ A}.} da subtração. A subtração de valores inteiros produz resultados de tipo \texttt{int}, mas se combinados valores inteiros e reais, o resultado será de tipo \texttt{float}.
+
+Como para o operador \texttt{+}, existe um segundo uso para o operador \texttt{-} como sinal negativo, por exemplo, \texttt{-7} ou \texttt{+20.06}, e cujo uso é mais comum, para explicitar valores considerados negativos.
+
+\hypertarget{multiplicauxe7uxe3o}{%
+\subsubsection{Multiplicação}\label{multiplicauxe7uxe3o}}
+
+O operador \texttt{*} permite efetuar a multiplicação ou o produto de dois valores, tomando dois operandos, com uso como segue.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{537} \OperatorTok{*} \DecValTok{215}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 115455
+\end{verbatim}
+
+Este operador pode efetuar o produto de qualquer combinação de valores inteiros e reais, além de obedecer as propriedades \emph{comutativa}\footnote{Propriedade \emph{comutativa}: a ordem dos operandos não altera o resultado, pois na multiplicação
+  \texttt{A\ *\ B\ =\ B\ *\ A}.}, \emph{associativa}\footnote{Propriedade \emph{associativa}: a associação dos operandos não modifica o resultado, pois na multiplicação
+  \texttt{A\ *\ B\ *\ C\ =\ (A\ *\ B)\ *\ C\ =\ A\ *\ (B\ *\ C)\ =\ (A\ *\ C)\ *\ B}.} e do \emph{elemento nêutro}\footnote{\emph{Elemento nêutro}: valor que não modifica o resultado da operação, a multiplicação por um não modifica o resultado, pois \texttt{A\ *\ 1\ =\ A}.} da multiplicação. Como antes, o produto de valores inteiros produz resultados de tipo \texttt{int}, mas se multiplicados valores inteiros e reais, o resultado será de tipo \texttt{float}.
+
+\hypertarget{divisuxe3o-real-divisuxe3o-inteira-e-resto-da-divisuxe3o}{%
+\subsubsection{Divisão real, divisão inteira e resto da divisão}\label{divisuxe3o-real-divisuxe3o-inteira-e-resto-da-divisuxe3o}}
+
+O operador \texttt{/} realiza a divisão de dois valores, obtendo um quociente a partir de dois operandos, com uso como segue.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{537} \OperatorTok{/} \DecValTok{215}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 2.4976744186046513
+\end{verbatim}
+
+Podem ser combinados valores inteiros e reais com este operador, que também possui um \emph{elemento nêutro}\footnote{\emph{Elemento nêutro}: valor que não modifica o resultado da operação, a divisão por um não modifica o resultado, pois \texttt{A\ /\ 1\ =\ A}.}. Deve-se tomar cuidado com a divisão por zero, que provoca o erro \texttt{ZeroDivisionError}. Também deve ser destacado que este operador realiza a divisão real dos operandos indicados, produzindo um resultado de tipo \texttt{float}, ou seja, que pode conter uma parte fracionária, com uma ou mais casas decimais. Mesmo que o resultado da divisão seja exato e não possua uma parte fracionária, seu tipo será \texttt{float}.
+
+Se desejado, pode ser utilizado o operador \texttt{//}, que realiza a divisão inteira (\emph{floor division}) de seus operandos, descartando a parte fracionária, retornando um resultado sempre do tipo \texttt{int}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{537} \OperatorTok{//} \DecValTok{215}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 2
+\end{verbatim}
+
+Também é possível obter o resto da divisão inteira com o operador \texttt{\%}, ou seja, a parcela inteira descartada pela divisão inteira. Por exemplo a divisão \texttt{6\ /\ 4} produz \texttt{1.5}, um valor real; enquanto a divisão inteira \texttt{6\ //\ 4} resulta \texttt{1}, sendo que o resto desta divisão \texttt{6\ \%\ 4} permite obter \texttt{2}. Este operador também é conhecido como \emph{módulo}.
+
+\hypertarget{potenciauxe7uxe3o}{%
+\subsubsection{Potenciação}\label{potenciauxe7uxe3o}}
+
+Python oferece um operador para realização da \emph{potenciação} (ou da \emph{exponenciação}) que é \texttt{**} (duplo asterisco, sem espaço em branco), usado na forma \texttt{base\ **\ expoente}, onde tanto a base, como o expoente, podem ser números inteiros ou reais, como segue:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2} \OperatorTok{**} \DecValTok{10}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 1024
+\end{verbatim}
+
+Assim, \texttt{2\ **\ 10} representa dois elevado à décima potência e \texttt{10\ **\ 3} calcula dez elevado ao cubo.
+
+Como na matemática, expoentes negativos representam potências inversas, por exemplo \texttt{2\ **\ -3} equivale à \texttt{1\ /\ (2\ **\ 3)}; e expoentes entre \texttt{0} e \texttt{1} permitem efetuar a \emph{radiciação} (obter raízes), ou seja, \texttt{16\ **\ (1/2)} e \texttt{16\ **\ 0.5} permitem calcular a raíz quadrada de \texttt{16}, enquanto \texttt{5\ **\ (1/3)} e \texttt{5\ **\ 0.3333} calculam a raiz cúbica de \texttt{5}.
+
+\hypertarget{comput-opera-relac}{%
+\subsection{Operadores Relacionais}\label{comput-opera-relac}}
+
+Os operadores relacionais permitem comparar valores determinando as existência de relações específicas entre eles, tal como mostra a Tabela 2.4. Vários dos operadores relacionais são compostos por dois caracteres, entre os quais \emph{não pode existir espaços em branco}.
+
+Tabela 2.4: Operadores relacionais
+
+\begin{longtable}[]{@{}clr@{}}
+\toprule
+Operador & Relação & Aridade \\
+\midrule
+\endhead
+\texttt{\textgreater{}} & Maior que. & 2 \\
+\texttt{\textgreater{}=} & Maior ou igual a. & 2 \\
+\texttt{\textless{}} & Menor que. & 2 \\
+\texttt{\textless{}=} & Menor ou igual a. & 2 \\
+\texttt{==} & Igual. & 2 \\
+\texttt{!=} & Diferente. & 2 \\
+\bottomrule
+\end{longtable}
+
+Todos os operadores relacionais tomam dois operandos e retornam como resultado um valor do tipo \texttt{bool}, ou seja, um resultado que só pode ser \texttt{False}, quando a relação indicada não existe (é falsa), ou \texttt{True}, quando se confirma a relação indicada (ou seja, é verdadeira). Um exemplo simples do uso destes operadores está no fragmento que segue, no qual se verifica se o valor \texttt{1964} \emph{é menor} que \texttt{1995} e produz um retorno \texttt{True}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1964} \OperatorTok{\textless{}} \DecValTok{1995}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## True
+\end{verbatim}
+
+O próximo fragmento mostra outro uso simples destes operadores, onde se compara \texttt{1931} e \texttt{2021} em relação a sua igualdade, o que produz um retorno \texttt{False}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1931} \OperatorTok{==} \DecValTok{2021}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## False
+\end{verbatim}
+
+Como será visto na seção \ref{comput-expre}, os operadores relacionais pode ser combinados com operadores aritméticos e lógicos para formar expressões compostas capazes de verificar relações mais complexas.
+
+\hypertarget{comput-opera-logic}{%
+\subsection{Operadores Lógicos}\label{comput-opera-logic}}
+
+Os operadores lógicos, listados da Tabela 2.5, permitem realizar as operações fundamentais da álgebra de Boole que são a conjunção (\emph{e-lógico}), a disjunção (\emph{ou-Lógico}) e a negação (\emph{não-lógico}).
+
+Tabela 2.5: Operadores lógicos
+
+\begin{longtable}[]{@{}clr@{}}
+\toprule
+Operador & Operação & Aridade \\
+\midrule
+\endhead
+\texttt{and} & E-lógico (conjunção). & 2 \\
+\texttt{or} & Ou-lógico (disjunção). & 2 \\
+\texttt{not} & Não-lógico (negação). & 1 \\
+\texttt{in} & Está em. & 2 \\
+\texttt{is} & È. & 2 \\
+\bottomrule
+\end{longtable}
+
+A operação de conjunção ou \emph{e-lógico} verifica o estado lógico de seus dois operandos e retorna um resultado verdadeiro (\texttt{True}) apenas se ambos os operandos são verdadeiros, como mostra a Tabela 2.6.
+
+Tabela 2.6: Tabela-verdade\footnote{Uma \emph{tabela-verdade} mostra todas as combinações possíveis dos operandos de uma função lógica e seus resultados. O número de combinações possíveis sempre é 2operandos.} do \emph{e-lógico} (conjunção)
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+A & B & A and B \\
+\midrule
+\endhead
+\texttt{False} & \texttt{False} & \texttt{False} \\
+\texttt{False} & \texttt{True} & \texttt{False} \\
+\texttt{True} & \texttt{False} & \texttt{False} \\
+\texttt{True} & \texttt{True} & \texttt{True} \\
+\bottomrule
+\end{longtable}
+
+A operação de disjunção ou \emph{ou-lógico} também verifica o estado lógico de seus dois operandos, mas retorna um resultado falso (\texttt{False}) apenas se ambos os operandos são falsos, como mostra a Tabela 2.7.
+
+Tabela 2.7: Tabela-verdade do \emph{ou-lógico} (disjunção)
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+A & B & A or B \\
+\midrule
+\endhead
+\texttt{False} & \texttt{False} & \texttt{False} \\
+\texttt{False} & \texttt{True} & \texttt{True} \\
+\texttt{True} & \texttt{False} & \texttt{True} \\
+\texttt{True} & \texttt{True} & \texttt{True} \\
+\bottomrule
+\end{longtable}
+
+Finalmente, a operação de negação ou \emph{não-lógico} retorna o oposto (ou inverso) de seu único operando, ou seja, quando este tem valor \texttt{False}, sua negação retorna \texttt{True}, e vice-versa, como na Tabela 2.8.
+
+Tabela 2.8: Tabela-verdade do \emph{não-lógico} (negação)
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+A & not A \\
+\midrule
+\endhead
+\texttt{False} & \texttt{True} \\
+\texttt{True} & \texttt{False} \\
+\bottomrule
+\end{longtable}
+
+Os operadores lógicos \texttt{and}, \texttt{or} e \texttt{not} permitem conectar logicamente o resultado de diferentes expressões aritméticas, relacionais ou lógicas, o que permite construir expressões compostas de várias partes e, portanto, mais complexas, como será visto na seção \ref{comput-expre}.
+
+Os operadores \texttt{in} (\emph{teste de membro}) e \texttt{is} (\emph{teste de identidade}) serão vistos nas seções que tratam de estruturas de dados e uso de objetos.
+
+\hypertarget{comput-varia}{%
+\section{Variáveis}\label{comput-varia}}
+
+Um programa de computador requer o uso de alguns ou de muitos dados para que possa produzir os resultados desejados. Durante a execução do programa, os dados necessários são armazenados na memória do computador. Para evitar que o programador tenha que lidar com os endereços de memória, isto é, com as posições onde os dados ficam efetivamente armazenados, são utilizadas \emph{variáveis}.
+
+Uma \emph{variável} é um espaço em memória, reservado para guardar um valor, ao qual se associa um \emph{identificador}, ou seja, um nome por meio do qual se define e se recupera o valor armazenado. O uso de variáveis simplifica a programação, pois o programador não precisa se preocupar com os endereços de memória utilizados, nem com o espaço necessário (número de bytes) para armazenar tais valores, tão pouco com a organização dos dados e das instruções do programa.
+
+Por meio do uso das variáveis, o programador pode armazenar valores literais ou o resultado de cálculos diversos, que podem ser utilizados em etapas posteriores do programa, evitando sua repetição e o processamento destes cálculos.
+
+Além disso, o uso de variáveis constitui um importante mecanismo de abstração\footnote{Segundo o Dicio (Dicionário On-Line de Português) \emph{abstrair} é a ação de analisar isoladamente um aspecto, contido num todo, sem ter em consideração sua relação com a realidade. Fazer a abstração de uma coisa permite simplificar, pois observamos seu aspecto principal, sem levar em conta seus detalhes (\url{https://www.dicio.com.br/}).}, pois o uso de nomes significativos melhora a legibilidade do programa e permite que suas ações sejam compreendidas mais facilmente.
+
+A criação de variáveis em Python é bastante simples e direta, empregando a sintaxe que segue:
+
+\begin{quote}
+identificador = valor\_inicial
+\end{quote}
+
+O \emph{identificador} é o \emph{nome} que o programador escolhe para uma variável, o símbolo \texttt{=} é o operador de atribuição e \texttt{valor\_inicial} é o valor que será inicialmente armazenado por esta variável. Por exemplo, a criação da variável de nome \texttt{a} com valor inicial definido pelo literal \texttt{15}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OperatorTok{=} \DecValTok{15}
+\end{Highlighting}
+\end{Shaded}
+
+Esta construção é lida como \emph{variável \texttt{a} recebe o valor 15} ou, resumidamente, \emph{\texttt{a} recebe 15}.
+
+Desta forma, para criar uma nova variável em um programa Python basta atribuir um valor para um novo identificador. A criação de uma variável desta maneira é chamada \emph{inicialização}. A partir de sua inicialização, a variável criada se torna disponível no escopo onde foi declarada.
+
+Para utilizar uma variável, em Python e outras linguagens de programação, basta utilizar seu nome, de maneira que este é automaticamente substituído pelo valor atual (ou corrente) da variável. Ou seja. apenas escrever seu nome.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 15
+\end{verbatim}
+
+Como esperado, o uso do nome de variável \texttt{a} recupera seu valor, no caso \texttt{15}.
+
+Observe que o Python não requer que o tipo da variável seja declarado, pois este é inferido conforme o tipo do valor atribuído , assim a variável \texttt{a} será do tipo \texttt{int}, como mostrado pelo uso da função \emph{built-in} \texttt{type()}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{type}\NormalTok{(a)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <class 'int'>
+\end{verbatim}
+
+Cada vez que a variável recebe um valor, o tipo da variável é novamente inferido, de maneira que, se atribuído um valor de tipo diferente do previamente armazenado na variável, seu tipo é \emph{alterado dinamicamente}, sem produzir qualquer tipo de erro. Assim, a variável \texttt{a}, do tipo \texttt{int}, pode receber um valor real como segue:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OperatorTok{=} \FloatTok{7.45}
+\end{Highlighting}
+\end{Shaded}
+
+A alteração do tipo da variável pode ser visto por meio da função \texttt{type()}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{type}\NormalTok{(a)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <class 'float'>
+\end{verbatim}
+
+A valor da variável \texttt{a} pode ser recuperado com uso de seu nome, permitindo verificar a alteração em seu conteúdo.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 7.45
+\end{verbatim}
+
+Em conjunto, tudo isto confere grande simplificade e flexibilidade ao Python em relação a criação e utilização de variáveis.
+
+\hypertarget{comput-varia-nomes}{%
+\subsection{Denominação de Variáveis}\label{comput-varia-nomes}}
+
+Os nomes de variáveis em Python podem ser compostos de uma ou mais letras, números e também símbolos \texttt{\_} (sublinhado ou \emph{underscore}), desde que iniciados por uma letra ou sublinhado. É recomendado que usem apenas letras minúsculas e, caso sejam compostos de mais de uma palavra, estas sejam separadas por um sublinhado. Esta convenção é conhecida como \emph{snake case}.
+
+São exemplo válidos: \texttt{x}, \texttt{s3}, \texttt{total}, \texttt{quadra03}, \texttt{posicao\_absoluta}, \texttt{\_media\_parcial}.
+
+Desde que seguida esta regra de formação, os nomes podem quaisquer, exceto das \emph{palavras reservadas} da linguagem (seção \ref{comput-varia-reser}), e arbitrariamente longos, assim sugere-se o uso de denominações representativas do propósito das variáveis, melhorando a legibilidade dos programas. Caracteres acentuados podem ser usados, embora desaconselhado. Em hipótese alguma os nomes podem conter espaços em branco, tabulações ou quaisquer operadores.
+
+\hypertarget{comput-varia-reser}{%
+\subsection{Palavras Reservadas}\label{comput-varia-reser}}
+
+O Python possui um conjunto de \emph{palavras reservadas} que tem significado pré-definido, pois indicam as diretivas da linguagem e outros elementos de sua sintaxe. As \emph{palavras reservadas}, ou as \emph{keywords}, listadas na Tabela 2.6 não podem ser utilizadas como identificadores ou para qualquer outro fim, exceto o determinado pela linguagem.
+
+Tabela 2.6: Palavras reservadas (\emph{keywords})
+
+\begin{longtable}[]{@{}ccccc@{}}
+\toprule
+& & & & \\
+\midrule
+\endhead
+and & as & assert & async & await \\
+break & class & continue & def & del \\
+elif & else & except & False & finally \\
+for & from & global & if & import \\
+in & is & lambda & None & nonlocal \\
+not & or & pass & raise & return \\
+True & try & while & with & yield \\
+\bottomrule
+\end{longtable}
+
+A maioria das palavras reservadas do Python é comum à outras linguagens de programação. Por exemplo, dentre as 35 \emph{keywords}, 12 são comuns ao Java e ao C\#.
+
+\hypertarget{comput-expre}{%
+\section{Expressões}\label{comput-expre}}
+
+Uma \emph{expressão} é uma combinação de valores literais (seção \ref{comput-liter}), variáveis (seção \ref{comput-varia}) e operadores (seção \ref{comput-opera}), que produz um resultado como consequência do encadeamento dos elementos nela indicados. A determinação do valor resultante de uma expressão é que se denomina \emph{avaliação da expressão}.
+
+O Python avalia as expressões da \emph{esquerda para direita}, ou seja, no sentido usual de leitura, por exemplo, considere as variáveis \texttt{x} e \texttt{y} inicializadas como seguem;
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{2}
+\NormalTok{y }\OperatorTok{=} \DecValTok{3}
+\end{Highlighting}
+\end{Shaded}
+
+Uma expressão simples pode combinar valores literais e variáveis, como segue:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1} \OperatorTok{+}\NormalTok{ x }\OperatorTok{+}\NormalTok{ y }\OperatorTok{+} \DecValTok{4}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 10
+\end{verbatim}
+
+O resultado, \texttt{10}, é obtido da soma dos valores expressos diretamente pelos literais e recuperados das variáveis indicadas, ou seja, \texttt{1\ +\ 2\ +\ 3\ +\ 4}.
+
+Mas as expressões podem combinar e utilizar operadores diferentes, como:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2} \OperatorTok{*}\NormalTok{ x }\OperatorTok{+}\NormalTok{ y }\OperatorTok{/} \DecValTok{4}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 4.75
+\end{verbatim}
+
+Aqui, o resultado \texttt{4.75} mostra que, quando operadores diferentes são misturados, a ordem de avaliação esquerda-para-direita é modificada. Isto ocorre porque alguns operadores possuem maior \emph{prioridade} (ou \emph{precedência}).
+
+A \emph{prioridade} dos operadores, ou sua \emph{precedência}, é o critério matemático que estabele a ordem com que os operadores serão executados em uma expressão, além de como os operadores envolvidos serão tomados (sua \emph{associatividade}).
+
+Para toda e qualquer expressão, sempre são aplicadas as regras de precedência da linguagem., garantindo que a expressão produza sempre o mesmo resultado, independentemente da plataforma ou do computadore utilizado.
+
+\hypertarget{comput-expre-prior}{%
+\subsection{Prioridade dos operadores}\label{comput-expre-prior}}
+
+Como uma expressão pode combinar operadores diferentes e com aridade distinta, é necessário estabelecer um critério para determinar qual a ordem de execução dos operadores, garantindo resultados consistentes na avaliação da expressões, seja qual for a combinação empregada.
+
+A Tabela 2.9 relaciona a prioridade dos operadores em Python, da maior (nível 1) para a menor (nível 18). Várias das indicações tratam de construções que serão vistas nos próximos capítulos deste material.
+
+Tabela 2.9: Prioridade (precedência) dos operadores em Python
+
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.09}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.34}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.57}}@{}}
+\toprule
+Nível & Operadores & Descrição \\
+\midrule
+\endhead
+1 & (\emph{expr}), {[}\emph{expr},\ldots{]},\{\emph{ch}:\emph{val}\}, \{\emph{expr},\ldots\} & Expressões parentisadas, listas, dicionários e conjuntos \\
+2 & {[}\emph{idx}{]}, {[}\emph{ini}:\emph{fim}{]},x(\emph{args}), \textbf{.} & Subscrição, fatiamento,passagem de argumentos, seleção \\
+3 & \texttt{await\ x} & Expressão \texttt{await} \\
+4 & \texttt{**} & Potenciação \\
+5 & \texttt{+x}, \texttt{-x}, \texttt{\textasciitilde{}} & Positivo, negativo, não \emph{bitwise} \\
+6 & \texttt{*}, \texttt{/}, \texttt{//}, \texttt{\%} & Multiplicação, divisão, divisão inteira, módulo \\
+7 & \texttt{+}, \texttt{-} & Adição, subtração \\
+8 & \texttt{\textless{}\textless{}}, \texttt{\textgreater{}\textgreater{}} & Deslocamento à esquerda e à direita \\
+9 & \texttt{\&} & E \emph{bitwise} \\
+10 & \texttt{\^{}} & Ou-exclusivo \emph{bitwise} \\
+11 & \texttt{\textbar{}} & Ou \emph{bitwise} \\
+12 & \texttt{\textless{}}, \texttt{\textless{}=}, \texttt{\textgreater{}}, \texttt{\textgreater{}=}, \texttt{==}, \texttt{!=},\texttt{in}, \texttt{not\ in}, \texttt{is}, \texttt{not\ is} & Relacionais, teste de membro e teste de identidade \\
+13 & \texttt{not\ x} & Não lógico \\
+14 & \texttt{and} & E lógico \\
+15 & \texttt{or} & Ou lógico \\
+16 & \texttt{if\ -\ else} & Expressão condicional \\
+17 & \texttt{lambda} & Expressão lambda \\
+18 & \texttt{=} & Atribuição \\
+\bottomrule
+\end{longtable}
+
+Os operadores existentes num mesmo nível possuem a mesma precedência, sendo avaliados conforme encontrados da esquerda para a direita.
+
+Os parênteses são operadores especiais, que podem ser utilizados para alterar a precedência pré-estabelecida de avaliação dos operadores, permitindo determinar uma sequência específica para o cálculo de uma expressão. Sempre é avaliado o conteúdo dos parênteses mais internos, prosseguindo com o conteúdo dos mais externos, até que a expressão seja completamente avaliada. Dentro de cada parênteses, a prioridade dos operadores é aplicada normalmente. A expressão \texttt{9\ *\ 5\ +\ 2} equivale à \texttt{(9\ *\ 5)\ +\ 2}, pois os parênteses não alteram a prioridade das operações, mas que é diferente de \texttt{9\ *\ (5\ +\ 2)}, cujo parânteses \emph{força} que a soma \texttt{5\ +\ 2} ocorra \emph{antes} da multiplicação.
+
+9 * 5 + 2 = (9 * 5) + 2 = 47
+
+Mas a próxima expressão só poderá ser avaliada corretamente se estiverem presentes os parêntesis indicados, caso contrário será obtido o resultado das expressões anteriores:
+
+9 * (5 + 2) = 9 * 7 = 63
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.12}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.88}}@{}}
+\toprule
+& \\
+\midrule
+\endhead
+\includegraphics{images/application-green.png} & O uso de parênteses, mesmo quando indicando a ordem natural de precedência, permite construir expressões cuja leitura é mais fácil, além de evitar alguns erros, constituindo assim uma boa prática de programação. \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{comput-funcao}{%
+\section{Funções}\label{comput-funcao}}
+
+Blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá.
+
+\hypertarget{seque}{%
+\chapter{Sequenciação}\label{seque}}
+
+A \emph{sequenciação} é a habilidade requerida para organizarmos uma sequência de instruções que permita resolver um problema específico.
+
+\begin{quote}
+Um algoritmo é uma sequência organizada e finita de instruções que permite a solução de um problema específico ou de uma classe de problemas.
+\end{quote}
+
+\hypertarget{repet}{%
+\chapter{Repetição}\label{repet}}
+
+Mais uma habilidade\ldots{}
+
+\hypertarget{repet-while}{%
+\section{Repetição Condicional}\label{repet-while}}
+
+Dá-lhe \emph{while}!
+
+\hypertarget{repet-for}{%
+\section{Repetição Automática}\label{repet-for}}
+
+Dá-lhe \emph{for}!
+
+\hypertarget{decis}{%
+\chapter{Decisão}\label{decis}}
+
+\hypertarget{decis-if}{%
+\section{Decisão Simples}\label{decis-if}}
+
+Aqui tratamos do \emph{if}!
+
+\hypertarget{decis-if-else}{%
+\section{Decisão Completa}\label{decis-if-else}}
+
+Aqui tratamos do \emph{if/else}!
+
+\hypertarget{decis-if-elif-else}{%
+\section{Decisões Encadeadas}\label{decis-if-elif-else}}
+
+Aqui tratamos do \emph{if/elif/else}!
+
+\hypertarget{modul}{%
+\chapter{Modularização}\label{modul}}
+
+\hypertarget{modul-main}{%
+\section{Programa Principal}\label{modul-main}}
+
+\hypertarget{modul-funcao}{%
+\section{Funções}\label{modul-funcao}}
+
+\hypertarget{modul-funcao-tipos}{%
+\subsection{Tipos de funções}\label{modul-funcao-tipos}}
+
+\hypertarget{modul-funcao-return}{%
+\subsection{Retorno de Valor}\label{modul-funcao-return}}
+
+\hypertarget{modul-funcao-param}{%
+\subsection{Passagem de Parâmetros}\label{modul-funcao-param}}
+
+\hypertarget{modul-funcao-default}{%
+\subsection{\texorpdfstring{Parâmetros \emph{Default}}{Parâmetros Default}}\label{modul-funcao-default}}
+
+\hypertarget{modul-funcao-var}{%
+\subsection{Parâmetros Variáveis}\label{modul-funcao-var}}
+
+\hypertarget{modul-import}{%
+\section{Importação}\label{modul-import}}
+
+\hypertarget{modul-packa}{%
+\section{Criação de pacotes e módulos}\label{modul-packa}}
+
+Como incluir as referências bibliográficas aqui?
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}
