@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 3 Sequenciação | Python - Guia do Programador</title>
+  <title>Capítulo 4 Sequenciação | Python - Guia do Programador</title>
   <meta name="description" content="Este é um livro experimental, criado com uso do pacote bookdown, destinado aos iniciantes em Python, para incentivar o uso desta linguagem de programação. O formato de saída escolhido para esse material é bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 3 Sequenciação | Python - Guia do Programador" />
+  <meta property="og:title" content="Capítulo 4 Sequenciação | Python - Guia do Programador" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="pjandl/pygp" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 3 Sequenciação | Python - Guia do Programador" />
+  <meta name="twitter:title" content="Capítulo 4 Sequenciação | Python - Guia do Programador" />
   
   <meta name="twitter:description" content="Este é um livro experimental, criado com uso do pacote bookdown, destinado aos iniciantes em Python, para incentivar o uso desta linguagem de programação. O formato de saída escolhido para esse material é bookdown::gitbook." />
   
@@ -24,14 +24,14 @@
 <meta name="author" content="Peter Jandl Junior" />
 
 
-<meta name="date" content="2021-06-22" />
+<meta name="date" content="2021-06-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="comput.html"/>
+<link rel="prev" href="e-s.html"/>
 <link rel="next" href="repet.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -170,49 +170,68 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="2.1" data-path="comput.html"><a href="comput.html#comput-liter"><i class="fa fa-check"></i><b>2.1</b> Valores Literais</a></li>
 <li class="chapter" data-level="2.2" data-path="comput.html"><a href="comput.html#comput-tipos"><i class="fa fa-check"></i><b>2.2</b> Tipos de Dados</a></li>
-<li class="chapter" data-level="2.3" data-path="comput.html"><a href="comput.html#comput-opera"><i class="fa fa-check"></i><b>2.3</b> Operadores</a>
+<li class="chapter" data-level="2.3" data-path="comput.html"><a href="comput.html#comput-varia"><i class="fa fa-check"></i><b>2.3</b> Variáveis</a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="comput.html"><a href="comput.html#comput-opera-aritm"><i class="fa fa-check"></i><b>2.3.1</b> Operadores Aritméticos</a></li>
-<li class="chapter" data-level="2.3.2" data-path="comput.html"><a href="comput.html#comput-opera-relac"><i class="fa fa-check"></i><b>2.3.2</b> Operadores Relacionais</a></li>
-<li class="chapter" data-level="2.3.3" data-path="comput.html"><a href="comput.html#comput-opera-logic"><i class="fa fa-check"></i><b>2.3.3</b> Operadores Lógicos</a></li>
+<li class="chapter" data-level="2.3.1" data-path="comput.html"><a href="comput.html#comput-varia-nomes"><i class="fa fa-check"></i><b>2.3.1</b> Denominação de Variáveis</a></li>
+<li class="chapter" data-level="2.3.2" data-path="comput.html"><a href="comput.html#comput-varia-reser"><i class="fa fa-check"></i><b>2.3.2</b> Palavras Reservadas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="comput.html"><a href="comput.html#comput-varia"><i class="fa fa-check"></i><b>2.4</b> Variáveis</a>
+<li class="chapter" data-level="2.4" data-path="comput.html"><a href="comput.html#comput-opera"><i class="fa fa-check"></i><b>2.4</b> Operadores</a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="comput.html"><a href="comput.html#comput-varia-nomes"><i class="fa fa-check"></i><b>2.4.1</b> Denominação de Variáveis</a></li>
-<li class="chapter" data-level="2.4.2" data-path="comput.html"><a href="comput.html#comput-varia-reser"><i class="fa fa-check"></i><b>2.4.2</b> Palavras Reservadas</a></li>
+<li class="chapter" data-level="2.4.1" data-path="comput.html"><a href="comput.html#comput-opera-aritm"><i class="fa fa-check"></i><b>2.4.1</b> Operadores Aritméticos</a></li>
+<li class="chapter" data-level="2.4.2" data-path="comput.html"><a href="comput.html#comput-opera-relac"><i class="fa fa-check"></i><b>2.4.2</b> Operadores Relacionais</a></li>
+<li class="chapter" data-level="2.4.3" data-path="comput.html"><a href="comput.html#comput-opera-logic"><i class="fa fa-check"></i><b>2.4.3</b> Operadores Lógicos</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="comput.html"><a href="comput.html#comput-expre"><i class="fa fa-check"></i><b>2.5</b> Expressões</a>
+<li class="chapter" data-level="2.5" data-path="comput.html"><a href="comput.html#comput-expre"><i class="fa fa-check"></i><b>2.5</b> Expressões</a></li>
+<li class="chapter" data-level="2.6" data-path="comput.html"><a href="comput.html#comput-prior"><i class="fa fa-check"></i><b>2.6</b> Prioridade dos operadores</a></li>
+<li class="chapter" data-level="2.7" data-path="comput.html"><a href="comput.html#comput-funcao"><i class="fa fa-check"></i><b>2.7</b> Funções</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="e-s.html"><a href="e-s.html"><i class="fa fa-check"></i><b>3</b> Entrada e Saída</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="comput.html"><a href="comput.html#comput-expre-prior"><i class="fa fa-check"></i><b>2.5.1</b> Prioridade dos operadores</a></li>
-</ul></li>
-<li class="chapter" data-level="2.6" data-path="comput.html"><a href="comput.html#comput-funcao"><i class="fa fa-check"></i><b>2.6</b> Funções</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="seque.html"><a href="seque.html"><i class="fa fa-check"></i><b>3</b> Sequenciação</a></li>
-<li class="chapter" data-level="4" data-path="repet.html"><a href="repet.html"><i class="fa fa-check"></i><b>4</b> Repetição</a>
+<li class="chapter" data-level="3.1" data-path="e-s.html"><a href="e-s.html#e-s-saida"><i class="fa fa-check"></i><b>3.1</b> Saída Simples</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="repet.html"><a href="repet.html#repet-while"><i class="fa fa-check"></i><b>4.1</b> Repetição Condicional</a></li>
-<li class="chapter" data-level="4.2" data-path="repet.html"><a href="repet.html#repet-for"><i class="fa fa-check"></i><b>4.2</b> Repetição Automática</a></li>
+<li class="chapter" data-level="3.1.1" data-path="e-s.html"><a href="e-s.html#e-s-saida-escap"><i class="fa fa-check"></i><b>3.1.1</b> Caracteres Especiais</a></li>
+<li class="chapter" data-level="3.1.2" data-path="e-s.html"><a href="e-s.html#e-s-saida-opcao"><i class="fa fa-check"></i><b>3.1.2</b> Controle de Separação e Finalização</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="decis.html"><a href="decis.html"><i class="fa fa-check"></i><b>5</b> Decisão</a>
+<li class="chapter" data-level="3.2" data-path="e-s.html"><a href="e-s.html#e-s-entra"><i class="fa fa-check"></i><b>3.2</b> Entrada</a></li>
+<li class="chapter" data-level="3.3" data-path="e-s.html"><a href="e-s.html#e-s-format"><i class="fa fa-check"></i><b>3.3</b> Saída Formatada</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="decis.html"><a href="decis.html#decis-if"><i class="fa fa-check"></i><b>5.1</b> Decisão Simples</a></li>
-<li class="chapter" data-level="5.2" data-path="decis.html"><a href="decis.html#decis-if-else"><i class="fa fa-check"></i><b>5.2</b> Decisão Completa</a></li>
-<li class="chapter" data-level="5.3" data-path="decis.html"><a href="decis.html#decis-if-elif-else"><i class="fa fa-check"></i><b>5.3</b> Decisões Encadeadas</a></li>
+<li class="chapter" data-level="3.3.1" data-path="e-s.html"><a href="e-s.html#e-s-format-funcao"><i class="fa fa-check"></i><b>3.3.1</b> Formatação com função <code>format()</code></a></li>
+<li class="chapter" data-level="3.3.2" data-path="e-s.html"><a href="e-s.html#e-s-format-inter"><i class="fa fa-check"></i><b>3.3.2</b> Interpolação de <em>string</em></a></li>
+<li class="chapter" data-level="3.3.3" data-path="e-s.html"><a href="e-s.html#e-s-format-fstring"><i class="fa fa-check"></i><b>3.3.3</b> Formatação com <em>f-string</em></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="modul.html"><a href="modul.html"><i class="fa fa-check"></i><b>6</b> Modularização</a>
+</ul></li>
+<li class="chapter" data-level="4" data-path="seque.html"><a href="seque.html"><i class="fa fa-check"></i><b>4</b> Sequenciação</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="modul.html"><a href="modul.html#modul-main"><i class="fa fa-check"></i><b>6.1</b> Programa Principal</a></li>
-<li class="chapter" data-level="6.2" data-path="modul.html"><a href="modul.html#modul-funcao"><i class="fa fa-check"></i><b>6.2</b> Funções</a>
+<li class="chapter" data-level="4.1" data-path="seque.html"><a href="seque.html#seque-progr"><i class="fa fa-check"></i><b>4.1</b> Programa Mínimo</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="repet.html"><a href="repet.html"><i class="fa fa-check"></i><b>5</b> Repetição</a>
 <ul>
-<li class="chapter" data-level="6.2.1" data-path="modul.html"><a href="modul.html#modul-funcao-tipos"><i class="fa fa-check"></i><b>6.2.1</b> Tipos de funções</a></li>
-<li class="chapter" data-level="6.2.2" data-path="modul.html"><a href="modul.html#modul-funcao-return"><i class="fa fa-check"></i><b>6.2.2</b> Retorno de Valor</a></li>
-<li class="chapter" data-level="6.2.3" data-path="modul.html"><a href="modul.html#modul-funcao-param"><i class="fa fa-check"></i><b>6.2.3</b> Passagem de Parâmetros</a></li>
-<li class="chapter" data-level="6.2.4" data-path="modul.html"><a href="modul.html#modul-funcao-default"><i class="fa fa-check"></i><b>6.2.4</b> Parâmetros <em>Default</em></a></li>
-<li class="chapter" data-level="6.2.5" data-path="modul.html"><a href="modul.html#modul-funcao-var"><i class="fa fa-check"></i><b>6.2.5</b> Parâmetros Variáveis</a></li>
+<li class="chapter" data-level="5.1" data-path="repet.html"><a href="repet.html#repet-while"><i class="fa fa-check"></i><b>5.1</b> Repetição Condicional</a></li>
+<li class="chapter" data-level="5.2" data-path="repet.html"><a href="repet.html#repet-for"><i class="fa fa-check"></i><b>5.2</b> Repetição Automática</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="modul.html"><a href="modul.html#modul-import"><i class="fa fa-check"></i><b>6.3</b> Importação</a></li>
-<li class="chapter" data-level="6.4" data-path="modul.html"><a href="modul.html#modul-packa"><i class="fa fa-check"></i><b>6.4</b> Criação de pacotes e módulos</a></li>
+<li class="chapter" data-level="6" data-path="decis.html"><a href="decis.html"><i class="fa fa-check"></i><b>6</b> Decisão</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="decis.html"><a href="decis.html#decis-if"><i class="fa fa-check"></i><b>6.1</b> Decisão Simples</a></li>
+<li class="chapter" data-level="6.2" data-path="decis.html"><a href="decis.html#decis-if-else"><i class="fa fa-check"></i><b>6.2</b> Decisão Completa</a></li>
+<li class="chapter" data-level="6.3" data-path="decis.html"><a href="decis.html#decis-if-elif-else"><i class="fa fa-check"></i><b>6.3</b> Decisões Encadeadas</a></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="modul.html"><a href="modul.html"><i class="fa fa-check"></i><b>7</b> Modularização</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="modul.html"><a href="modul.html#modul-main"><i class="fa fa-check"></i><b>7.1</b> Programa Principal</a></li>
+<li class="chapter" data-level="7.2" data-path="modul.html"><a href="modul.html#modul-funcao"><i class="fa fa-check"></i><b>7.2</b> Funções</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="modul.html"><a href="modul.html#modul-funcao-tipos"><i class="fa fa-check"></i><b>7.2.1</b> Tipos de funções</a></li>
+<li class="chapter" data-level="7.2.2" data-path="modul.html"><a href="modul.html#modul-funcao-return"><i class="fa fa-check"></i><b>7.2.2</b> Retorno de Valor</a></li>
+<li class="chapter" data-level="7.2.3" data-path="modul.html"><a href="modul.html#modul-funcao-param"><i class="fa fa-check"></i><b>7.2.3</b> Passagem de Parâmetros</a></li>
+<li class="chapter" data-level="7.2.4" data-path="modul.html"><a href="modul.html#modul-funcao-default"><i class="fa fa-check"></i><b>7.2.4</b> Parâmetros <em>Default</em></a></li>
+<li class="chapter" data-level="7.2.5" data-path="modul.html"><a href="modul.html#modul-funcao-var"><i class="fa fa-check"></i><b>7.2.5</b> Parâmetros Variáveis</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="modul.html"><a href="modul.html#modul-import"><i class="fa fa-check"></i><b>7.3</b> Importação</a></li>
+<li class="chapter" data-level="7.4" data-path="modul.html"><a href="modul.html#modul-packa"><i class="fa fa-check"></i><b>7.4</b> Criação de pacotes e módulos</a></li>
+</ul></li>
+<li class="appendix"><span><b>Apêndices</b></span></li>
+<li class="chapter" data-level="A" data-path="instalação-básica.html"><a href="instalação-básica.html"><i class="fa fa-check"></i><b>A</b> Instalação básica</a></li>
+<li class="chapter" data-level="B" data-path="instalação-do-anaconda.html"><a href="instalação-do-anaconda.html"><i class="fa fa-check"></i><b>B</b> Instalação do Anaconda</a></li>
 <li class="chapter" data-level="" data-path="referências-bibliográficas.html"><a href="referências-bibliográficas.html"><i class="fa fa-check"></i>Referências Bibliográficas</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -234,20 +253,40 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="seque" class="section level1" number="3">
-<h1><span class="header-section-number">Capítulo 3</span> Sequenciação</h1>
-<p>A <em>sequenciação</em> é a habilidade requerida para organizarmos uma sequência de instruções que permita resolver um problema específico.</p>
+<div id="seque" class="section level1" number="4">
+<h1><span class="header-section-number">Capítulo 4</span> Sequenciação</h1>
+<p>A <em>sequenciação</em> é a habilidade requerida para organizarmos uma sequência de instruções que permita resolver um problema específico. De muitas maneiras, sequenciar instruções é o mesmo que criar um <em>algoritmo</em><a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a>, pois:</p>
+<blockquote>
+<p>Na Matemática, representa um conjunto de regras para a resolução de um cálculo numérico, como, por exemplo, o algoritmo de Euclides encontra o máximo divisor comum de dois números inteiros. É também uma sequência de raciocínios ou operações que oferece a solução de certos problemas.
+Na Informática, é um conjunto de regras que fornecem uma sequência de operações capazes de resolver um problema específico.</p>
+</blockquote>
+<p>Uma definição um pouco mais precisa do ponto de vista da Ciência da Computação seria:</p>
 <blockquote>
 <p>Um algoritmo é uma sequência organizada e finita de instruções que permite a solução de um problema específico ou de uma classe de problemas.</p>
 </blockquote>
+<p>A habilidade da sequenciação trata, assim, de estabelecer uma sequência adequada de instruções para solução de um problema, ou seja, ela representa a lógica com a qual resolvemos um problema. A sequenciação determina como os dados de um problema serão processados, portanto combina todas as habilidades requeridas para a construção de programa de computador, que são a entrada e saída, a computação, a repetição, a decisão e a modularização.</p>
+<div id="seque-progr" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Programa Mínimo</h2>
+<p>O comportamento <em>natural</em> de um programa é ter suas instruções executadas uma a uma, da primeira até a última, na ordem em que se encontram. Isto é é o que se denomina <em>fluxo sequencial</em>. As instruções, chamadas formalmente de diretivas (<em>statements</em>), são separadas, no Python, por uma quebra de linha, de maneira que um programa é um texto, contendo uma, várias ou muitas instruções organizadas numa sequência.</p>
+<p>Na verdade, o Python é bastante direto para a construção de seus programas, pois uma sequência simples de instruções constitui um programa, de modo que o menor programa possível, ou seja, o <em>programa mínimo</em> seja aquele constituído de uma única instrução como no programa que segue, o clássico <a href="https://www.thesoftwareguild.com/blog/the-history-of-hello-world/"><em>Hello World</em></a>.</p>
+<div class="sourceCode" id="cb181"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb181-1"><a href="seque.html#cb181-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Hello, world!&#39;</span>)</span></code></pre></div>
+<pre><code>&gt;&gt;&gt; Hello, world!</code></pre>
+<p>Esta simplicidade extrema torna o Python atraente tanto para aquele que está iniciando os estudos em programação, como para o especialista de outra área que pode se beneficiar da autonomia de criar seus próprios programas, assim como para os profissionais de Tecnologia da Informação que trabalham com desenvolvimento de software.</p>
 
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="24">
+<li id="fn24"><p>Dicio (Dicionário On-Line de Português): <a href="https://www.dicio.com.br/algoritmo/" class="uri">https://www.dicio.com.br/algoritmo/</a><a href="seque.html#fnref24" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="comput.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="e-s.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="repet.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -280,7 +319,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-sequenciacao.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-sequenciacao.Rmd",
 "text": "Edit"
 },
 "history": {

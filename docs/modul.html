@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 6 Modularização | Python - Guia do Programador</title>
+  <title>Capítulo 7 Modularização | Python - Guia do Programador</title>
   <meta name="description" content="Este é um livro experimental, criado com uso do pacote bookdown, destinado aos iniciantes em Python, para incentivar o uso desta linguagem de programação. O formato de saída escolhido para esse material é bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 6 Modularização | Python - Guia do Programador" />
+  <meta property="og:title" content="Capítulo 7 Modularização | Python - Guia do Programador" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="pjandl/pygp" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 6 Modularização | Python - Guia do Programador" />
+  <meta name="twitter:title" content="Capítulo 7 Modularização | Python - Guia do Programador" />
   
   <meta name="twitter:description" content="Este é um livro experimental, criado com uso do pacote bookdown, destinado aos iniciantes em Python, para incentivar o uso desta linguagem de programação. O formato de saída escolhido para esse material é bookdown::gitbook." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Peter Jandl Junior" />
 
 
-<meta name="date" content="2021-06-22" />
+<meta name="date" content="2021-06-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="decis.html"/>
-<link rel="next" href="referências-bibliográficas.html"/>
+<link rel="next" href="instalação-básica.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -170,49 +170,68 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="2.1" data-path="comput.html"><a href="comput.html#comput-liter"><i class="fa fa-check"></i><b>2.1</b> Valores Literais</a></li>
 <li class="chapter" data-level="2.2" data-path="comput.html"><a href="comput.html#comput-tipos"><i class="fa fa-check"></i><b>2.2</b> Tipos de Dados</a></li>
-<li class="chapter" data-level="2.3" data-path="comput.html"><a href="comput.html#comput-opera"><i class="fa fa-check"></i><b>2.3</b> Operadores</a>
+<li class="chapter" data-level="2.3" data-path="comput.html"><a href="comput.html#comput-varia"><i class="fa fa-check"></i><b>2.3</b> Variáveis</a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="comput.html"><a href="comput.html#comput-opera-aritm"><i class="fa fa-check"></i><b>2.3.1</b> Operadores Aritméticos</a></li>
-<li class="chapter" data-level="2.3.2" data-path="comput.html"><a href="comput.html#comput-opera-relac"><i class="fa fa-check"></i><b>2.3.2</b> Operadores Relacionais</a></li>
-<li class="chapter" data-level="2.3.3" data-path="comput.html"><a href="comput.html#comput-opera-logic"><i class="fa fa-check"></i><b>2.3.3</b> Operadores Lógicos</a></li>
+<li class="chapter" data-level="2.3.1" data-path="comput.html"><a href="comput.html#comput-varia-nomes"><i class="fa fa-check"></i><b>2.3.1</b> Denominação de Variáveis</a></li>
+<li class="chapter" data-level="2.3.2" data-path="comput.html"><a href="comput.html#comput-varia-reser"><i class="fa fa-check"></i><b>2.3.2</b> Palavras Reservadas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="comput.html"><a href="comput.html#comput-varia"><i class="fa fa-check"></i><b>2.4</b> Variáveis</a>
+<li class="chapter" data-level="2.4" data-path="comput.html"><a href="comput.html#comput-opera"><i class="fa fa-check"></i><b>2.4</b> Operadores</a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="comput.html"><a href="comput.html#comput-varia-nomes"><i class="fa fa-check"></i><b>2.4.1</b> Denominação de Variáveis</a></li>
-<li class="chapter" data-level="2.4.2" data-path="comput.html"><a href="comput.html#comput-varia-reser"><i class="fa fa-check"></i><b>2.4.2</b> Palavras Reservadas</a></li>
+<li class="chapter" data-level="2.4.1" data-path="comput.html"><a href="comput.html#comput-opera-aritm"><i class="fa fa-check"></i><b>2.4.1</b> Operadores Aritméticos</a></li>
+<li class="chapter" data-level="2.4.2" data-path="comput.html"><a href="comput.html#comput-opera-relac"><i class="fa fa-check"></i><b>2.4.2</b> Operadores Relacionais</a></li>
+<li class="chapter" data-level="2.4.3" data-path="comput.html"><a href="comput.html#comput-opera-logic"><i class="fa fa-check"></i><b>2.4.3</b> Operadores Lógicos</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="comput.html"><a href="comput.html#comput-expre"><i class="fa fa-check"></i><b>2.5</b> Expressões</a>
+<li class="chapter" data-level="2.5" data-path="comput.html"><a href="comput.html#comput-expre"><i class="fa fa-check"></i><b>2.5</b> Expressões</a></li>
+<li class="chapter" data-level="2.6" data-path="comput.html"><a href="comput.html#comput-prior"><i class="fa fa-check"></i><b>2.6</b> Prioridade dos operadores</a></li>
+<li class="chapter" data-level="2.7" data-path="comput.html"><a href="comput.html#comput-funcao"><i class="fa fa-check"></i><b>2.7</b> Funções</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="e-s.html"><a href="e-s.html"><i class="fa fa-check"></i><b>3</b> Entrada e Saída</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="comput.html"><a href="comput.html#comput-expre-prior"><i class="fa fa-check"></i><b>2.5.1</b> Prioridade dos operadores</a></li>
-</ul></li>
-<li class="chapter" data-level="2.6" data-path="comput.html"><a href="comput.html#comput-funcao"><i class="fa fa-check"></i><b>2.6</b> Funções</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="seque.html"><a href="seque.html"><i class="fa fa-check"></i><b>3</b> Sequenciação</a></li>
-<li class="chapter" data-level="4" data-path="repet.html"><a href="repet.html"><i class="fa fa-check"></i><b>4</b> Repetição</a>
+<li class="chapter" data-level="3.1" data-path="e-s.html"><a href="e-s.html#e-s-saida"><i class="fa fa-check"></i><b>3.1</b> Saída Simples</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="repet.html"><a href="repet.html#repet-while"><i class="fa fa-check"></i><b>4.1</b> Repetição Condicional</a></li>
-<li class="chapter" data-level="4.2" data-path="repet.html"><a href="repet.html#repet-for"><i class="fa fa-check"></i><b>4.2</b> Repetição Automática</a></li>
+<li class="chapter" data-level="3.1.1" data-path="e-s.html"><a href="e-s.html#e-s-saida-escap"><i class="fa fa-check"></i><b>3.1.1</b> Caracteres Especiais</a></li>
+<li class="chapter" data-level="3.1.2" data-path="e-s.html"><a href="e-s.html#e-s-saida-opcao"><i class="fa fa-check"></i><b>3.1.2</b> Controle de Separação e Finalização</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="decis.html"><a href="decis.html"><i class="fa fa-check"></i><b>5</b> Decisão</a>
+<li class="chapter" data-level="3.2" data-path="e-s.html"><a href="e-s.html#e-s-entra"><i class="fa fa-check"></i><b>3.2</b> Entrada</a></li>
+<li class="chapter" data-level="3.3" data-path="e-s.html"><a href="e-s.html#e-s-format"><i class="fa fa-check"></i><b>3.3</b> Saída Formatada</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="decis.html"><a href="decis.html#decis-if"><i class="fa fa-check"></i><b>5.1</b> Decisão Simples</a></li>
-<li class="chapter" data-level="5.2" data-path="decis.html"><a href="decis.html#decis-if-else"><i class="fa fa-check"></i><b>5.2</b> Decisão Completa</a></li>
-<li class="chapter" data-level="5.3" data-path="decis.html"><a href="decis.html#decis-if-elif-else"><i class="fa fa-check"></i><b>5.3</b> Decisões Encadeadas</a></li>
+<li class="chapter" data-level="3.3.1" data-path="e-s.html"><a href="e-s.html#e-s-format-funcao"><i class="fa fa-check"></i><b>3.3.1</b> Formatação com função <code>format()</code></a></li>
+<li class="chapter" data-level="3.3.2" data-path="e-s.html"><a href="e-s.html#e-s-format-inter"><i class="fa fa-check"></i><b>3.3.2</b> Interpolação de <em>string</em></a></li>
+<li class="chapter" data-level="3.3.3" data-path="e-s.html"><a href="e-s.html#e-s-format-fstring"><i class="fa fa-check"></i><b>3.3.3</b> Formatação com <em>f-string</em></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="modul.html"><a href="modul.html"><i class="fa fa-check"></i><b>6</b> Modularização</a>
+</ul></li>
+<li class="chapter" data-level="4" data-path="seque.html"><a href="seque.html"><i class="fa fa-check"></i><b>4</b> Sequenciação</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="modul.html"><a href="modul.html#modul-main"><i class="fa fa-check"></i><b>6.1</b> Programa Principal</a></li>
-<li class="chapter" data-level="6.2" data-path="modul.html"><a href="modul.html#modul-funcao"><i class="fa fa-check"></i><b>6.2</b> Funções</a>
+<li class="chapter" data-level="4.1" data-path="seque.html"><a href="seque.html#seque-progr"><i class="fa fa-check"></i><b>4.1</b> Programa Mínimo</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="repet.html"><a href="repet.html"><i class="fa fa-check"></i><b>5</b> Repetição</a>
 <ul>
-<li class="chapter" data-level="6.2.1" data-path="modul.html"><a href="modul.html#modul-funcao-tipos"><i class="fa fa-check"></i><b>6.2.1</b> Tipos de funções</a></li>
-<li class="chapter" data-level="6.2.2" data-path="modul.html"><a href="modul.html#modul-funcao-return"><i class="fa fa-check"></i><b>6.2.2</b> Retorno de Valor</a></li>
-<li class="chapter" data-level="6.2.3" data-path="modul.html"><a href="modul.html#modul-funcao-param"><i class="fa fa-check"></i><b>6.2.3</b> Passagem de Parâmetros</a></li>
-<li class="chapter" data-level="6.2.4" data-path="modul.html"><a href="modul.html#modul-funcao-default"><i class="fa fa-check"></i><b>6.2.4</b> Parâmetros <em>Default</em></a></li>
-<li class="chapter" data-level="6.2.5" data-path="modul.html"><a href="modul.html#modul-funcao-var"><i class="fa fa-check"></i><b>6.2.5</b> Parâmetros Variáveis</a></li>
+<li class="chapter" data-level="5.1" data-path="repet.html"><a href="repet.html#repet-while"><i class="fa fa-check"></i><b>5.1</b> Repetição Condicional</a></li>
+<li class="chapter" data-level="5.2" data-path="repet.html"><a href="repet.html#repet-for"><i class="fa fa-check"></i><b>5.2</b> Repetição Automática</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="modul.html"><a href="modul.html#modul-import"><i class="fa fa-check"></i><b>6.3</b> Importação</a></li>
-<li class="chapter" data-level="6.4" data-path="modul.html"><a href="modul.html#modul-packa"><i class="fa fa-check"></i><b>6.4</b> Criação de pacotes e módulos</a></li>
+<li class="chapter" data-level="6" data-path="decis.html"><a href="decis.html"><i class="fa fa-check"></i><b>6</b> Decisão</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="decis.html"><a href="decis.html#decis-if"><i class="fa fa-check"></i><b>6.1</b> Decisão Simples</a></li>
+<li class="chapter" data-level="6.2" data-path="decis.html"><a href="decis.html#decis-if-else"><i class="fa fa-check"></i><b>6.2</b> Decisão Completa</a></li>
+<li class="chapter" data-level="6.3" data-path="decis.html"><a href="decis.html#decis-if-elif-else"><i class="fa fa-check"></i><b>6.3</b> Decisões Encadeadas</a></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="modul.html"><a href="modul.html"><i class="fa fa-check"></i><b>7</b> Modularização</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="modul.html"><a href="modul.html#modul-main"><i class="fa fa-check"></i><b>7.1</b> Programa Principal</a></li>
+<li class="chapter" data-level="7.2" data-path="modul.html"><a href="modul.html#modul-funcao"><i class="fa fa-check"></i><b>7.2</b> Funções</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="modul.html"><a href="modul.html#modul-funcao-tipos"><i class="fa fa-check"></i><b>7.2.1</b> Tipos de funções</a></li>
+<li class="chapter" data-level="7.2.2" data-path="modul.html"><a href="modul.html#modul-funcao-return"><i class="fa fa-check"></i><b>7.2.2</b> Retorno de Valor</a></li>
+<li class="chapter" data-level="7.2.3" data-path="modul.html"><a href="modul.html#modul-funcao-param"><i class="fa fa-check"></i><b>7.2.3</b> Passagem de Parâmetros</a></li>
+<li class="chapter" data-level="7.2.4" data-path="modul.html"><a href="modul.html#modul-funcao-default"><i class="fa fa-check"></i><b>7.2.4</b> Parâmetros <em>Default</em></a></li>
+<li class="chapter" data-level="7.2.5" data-path="modul.html"><a href="modul.html#modul-funcao-var"><i class="fa fa-check"></i><b>7.2.5</b> Parâmetros Variáveis</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="modul.html"><a href="modul.html#modul-import"><i class="fa fa-check"></i><b>7.3</b> Importação</a></li>
+<li class="chapter" data-level="7.4" data-path="modul.html"><a href="modul.html#modul-packa"><i class="fa fa-check"></i><b>7.4</b> Criação de pacotes e módulos</a></li>
+</ul></li>
+<li class="appendix"><span><b>Apêndices</b></span></li>
+<li class="chapter" data-level="A" data-path="instalação-básica.html"><a href="instalação-básica.html"><i class="fa fa-check"></i><b>A</b> Instalação básica</a></li>
+<li class="chapter" data-level="B" data-path="instalação-do-anaconda.html"><a href="instalação-do-anaconda.html"><i class="fa fa-check"></i><b>B</b> Instalação do Anaconda</a></li>
 <li class="chapter" data-level="" data-path="referências-bibliográficas.html"><a href="referências-bibliográficas.html"><i class="fa fa-check"></i>Referências Bibliográficas</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -234,44 +253,47 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="modul" class="section level1" number="6">
-<h1><span class="header-section-number">Capítulo 6</span> Modularização</h1>
-<div id="modul-main" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Programa Principal</h2>
+<div id="modul" class="section level1" number="7">
+<h1><span class="header-section-number">Capítulo 7</span> Modularização</h1>
+<div id="modul-main" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Programa Principal</h2>
 </div>
-<div id="modul-funcao" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Funções</h2>
-<div id="modul-funcao-tipos" class="section level3" number="6.2.1">
-<h3><span class="header-section-number">6.2.1</span> Tipos de funções</h3>
+<div id="modul-funcao" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Funções</h2>
+<div id="modul-funcao-tipos" class="section level3" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Tipos de funções</h3>
 </div>
-<div id="modul-funcao-return" class="section level3" number="6.2.2">
-<h3><span class="header-section-number">6.2.2</span> Retorno de Valor</h3>
+<div id="modul-funcao-return" class="section level3" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> Retorno de Valor</h3>
 </div>
-<div id="modul-funcao-param" class="section level3" number="6.2.3">
-<h3><span class="header-section-number">6.2.3</span> Passagem de Parâmetros</h3>
+<div id="modul-funcao-param" class="section level3" number="7.2.3">
+<h3><span class="header-section-number">7.2.3</span> Passagem de Parâmetros</h3>
 </div>
-<div id="modul-funcao-default" class="section level3" number="6.2.4">
-<h3><span class="header-section-number">6.2.4</span> Parâmetros <em>Default</em></h3>
+<div id="modul-funcao-default" class="section level3" number="7.2.4">
+<h3><span class="header-section-number">7.2.4</span> Parâmetros <em>Default</em></h3>
 </div>
-<div id="modul-funcao-var" class="section level3" number="6.2.5">
-<h3><span class="header-section-number">6.2.5</span> Parâmetros Variáveis</h3>
+<div id="modul-funcao-var" class="section level3" number="7.2.5">
+<h3><span class="header-section-number">7.2.5</span> Parâmetros Variáveis</h3>
 </div>
 </div>
-<div id="modul-import" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> Importação</h2>
+<div id="modul-import" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Importação</h2>
 </div>
-<div id="modul-packa" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Criação de pacotes e módulos</h2>
+<div id="modul-packa" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> Criação de pacotes e módulos</h2>
 
 </div>
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
 <a href="decis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="referências-bibliográficas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="instalação-básica.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -303,7 +325,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-modularizacao.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/07-modularizacao.Rmd",
 "text": "Edit"
 },
 "history": {

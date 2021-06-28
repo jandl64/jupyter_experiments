@@ -1,3 +1,5 @@
+fig:03-01
+fig:03-02
 intro
 introd-histo
 introd-carac
@@ -5,6 +7,9 @@ introd-habil
 comput
 comput-liter
 comput-tipos
+comput-varia
+comput-varia-nomes
+comput-varia-reser
 comput-opera
 comput-opera-aritm
 adição
@@ -14,13 +19,20 @@ divisão-real-divisão-inteira-e-resto-da-divisão
 potenciação
 comput-opera-relac
 comput-opera-logic
-comput-varia
-comput-varia-nomes
-comput-varia-reser
 comput-expre
-comput-expre-prior
+comput-prior
 comput-funcao
+e-s
+e-s-saida
+e-s-saida-escap
+e-s-saida-opcao
+e-s-entra
+e-s-format
+e-s-format-funcao
+e-s-format-inter
+e-s-format-fstring
 seque
+seque-progr
 repet
 repet-while
 repet-for
@@ -38,3 +50,5 @@ modul-funcao-default
 modul-funcao-var
 modul-import
 modul-packa
+instalação-básica
+instalação-do-anaconda
