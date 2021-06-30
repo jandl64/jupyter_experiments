@@ -52,3 +52,12 @@ modul-import
 modul-packa
 instalação-básica
 instalação-do-anaconda
+seque-e-p-s
+seque-e-p-s-paral
+entrada
+processamento
+seque-e-p-s-temper
+saída
+fig:04-01
+fig:04-02
+programa-completo
