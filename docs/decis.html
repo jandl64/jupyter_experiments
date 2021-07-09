@@ -24,7 +24,7 @@
 <meta name="author" content="Peter Jandl Junior" />
 
 
-<meta name="date" content="2021-06-28" />
+<meta name="date" content="2021-07-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -120,28 +120,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -159,7 +137,11 @@ div.csl-indent {
 <li><a href="./">Python - Guia do Programador</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#convenções"><i class="fa fa-check"></i>Convenções</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#código-fonte"><i class="fa fa-check"></i>Código fonte</a></li>
+</ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introdução</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#introd-histo"><i class="fa fa-check"></i><b>1.1</b> Breve Histórico</a></li>
@@ -183,7 +165,12 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="comput.html"><a href="comput.html#comput-expre"><i class="fa fa-check"></i><b>2.5</b> Expressões</a></li>
 <li class="chapter" data-level="2.6" data-path="comput.html"><a href="comput.html#comput-prior"><i class="fa fa-check"></i><b>2.6</b> Prioridade dos operadores</a></li>
-<li class="chapter" data-level="2.7" data-path="comput.html"><a href="comput.html#comput-funcao"><i class="fa fa-check"></i><b>2.7</b> Funções</a></li>
+<li class="chapter" data-level="2.7" data-path="comput.html"><a href="comput.html#comput-atrib"><i class="fa fa-check"></i><b>2.7</b> Atribuição</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="comput.html"><a href="comput.html#comput-atrib-multi"><i class="fa fa-check"></i><b>2.7.1</b> Atribuição Múltipla</a></li>
+<li class="chapter" data-level="2.7.2" data-path="comput.html"><a href="comput.html#comput-atrib-compo"><i class="fa fa-check"></i><b>2.7.2</b> Atribuição Composta</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="comput.html"><a href="comput.html#comput-funcao"><i class="fa fa-check"></i><b>2.8</b> Funções</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="e-s.html"><a href="e-s.html"><i class="fa fa-check"></i><b>3</b> Entrada e Saída</a>
 <ul>
@@ -203,11 +190,27 @@ div.csl-indent {
 <li class="chapter" data-level="4" data-path="seque.html"><a href="seque.html"><i class="fa fa-check"></i><b>4</b> Sequenciação</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="seque.html"><a href="seque.html#seque-progr"><i class="fa fa-check"></i><b>4.1</b> Programa Mínimo</a></li>
+<li class="chapter" data-level="4.2" data-path="seque.html"><a href="seque.html#seque-e-p-s"><i class="fa fa-check"></i><b>4.2</b> Estratégia E-P-S</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="seque.html"><a href="seque.html#seque-e-p-s-temper"><i class="fa fa-check"></i><b>4.2.1</b> Problema I: temperatura média e amplitude térmica</a></li>
+<li class="chapter" data-level="4.2.2" data-path="seque.html"><a href="seque.html#seque-e-p-s-caixa"><i class="fa fa-check"></i><b>4.2.2</b> Problema II: caixas de papelão</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="repet.html"><a href="repet.html"><i class="fa fa-check"></i><b>5</b> Repetição</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="repet.html"><a href="repet.html#repet-while"><i class="fa fa-check"></i><b>5.1</b> Repetição Condicional</a></li>
-<li class="chapter" data-level="5.2" data-path="repet.html"><a href="repet.html#repet-for"><i class="fa fa-check"></i><b>5.2</b> Repetição Automática</a></li>
+<li class="chapter" data-level="5.1" data-path="repet.html"><a href="repet.html#repet-while"><i class="fa fa-check"></i><b>5.1</b> Repetição Condicional</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="repet.html"><a href="repet.html#repet-while-conta"><i class="fa fa-check"></i><b>5.1.1</b> Contagem com <code>while</code></a></li>
+<li class="chapter" data-level="5.1.2" data-path="repet.html"><a href="repet.html#repet-while-acumu"><i class="fa fa-check"></i><b>5.1.2</b> Agregação com <code>while</code></a></li>
+<li class="chapter" data-level="5.1.3" data-path="repet.html"><a href="repet.html#repet-while-ating"><i class="fa fa-check"></i><b>5.1.3</b> Atingimento de condição com <code>while</code></a></li>
+<li class="chapter" data-level="5.1.4" data-path="repet.html"><a href="repet.html#repet-while-percu"><i class="fa fa-check"></i><b>5.1.4</b> Percurso com <code>while</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="repet.html"><a href="repet.html#repet-for"><i class="fa fa-check"></i><b>5.2</b> Repetição Automática</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="repet.html"><a href="repet.html#repet-for-percu"><i class="fa fa-check"></i><b>5.2.1</b> Percurso com <code>for</code></a></li>
+<li class="chapter" data-level="5.2.2" data-path="repet.html"><a href="repet.html#repet-for-conta"><i class="fa fa-check"></i><b>5.2.2</b> Contagem com <code>for</code></a></li>
+<li class="chapter" data-level="5.2.3" data-path="repet.html"><a href="repet.html#repet-for-acumu"><i class="fa fa-check"></i><b>5.2.3</b> Agregação com <code>for</code></a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="decis.html"><a href="decis.html"><i class="fa fa-check"></i><b>6</b> Decisão</a>
 <ul>
@@ -255,9 +258,47 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="decis" class="section level1" number="6">
 <h1><span class="header-section-number">Capítulo 6</span> Decisão</h1>
+<p>A sequenciação é fundamental na programação, pois permite estabelecer uma sequência adequada de instruções, organizadas para solucionar um problema, ou seja, determina quais dados são necessários e como serão processados, representando, assim, a lógica com a qual resolvemos um problema. Desta maneira, são combinadas as operações de entrada e saída, de computação e de repetição.</p>
+<p>Mas existem circunstâncias onde, considerados os resultados obtidos pelo programa, um determinado conjunto de instruções não é adequado para realizar uma etapa específica do problema, sendo requerido o uso de outra alternativa diferente para o processamento dos dados, ou seja, existem situações onde o fluxo sequencial de execução não mais atende as necessidades do problema.</p>
+<p>A <em>decisão</em> é uma habilidade muito importante na programação de computadores, pois oferece uma maneira para escolher quais instruções serão executadas, isto é, permite que, durante a execução do programa, sejam selecionadas as instruções que serão executadas. A <em>decisão</em> ou <em>seleção</em> é realizada mediante a avaliação de uma expressão lógica que representa a <em>condição</em> que o programador estabelece como critério de escolha ou de seleção.</p>
+<p>O Python oferece a diretiva de decisão <code>if</code>, que oferece várias possibilidades de uso:</p>
+<ul>
+<li>efetuar uma decisão simples;</li>
+<li>realizar uma decisão completa;</li>
+<li>encadear várias decisões.</li>
+</ul>
+<p>Vejamos cada uma dessas possibilidades.</p>
 <div id="decis-if" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Decisão Simples</h2>
-<p>Aqui tratamos do <em>if</em>!</p>
+<p>A <em>decisão simples</em> permite selecionar um comando ou um conjunto de comandos para execução, por meio da avaliação de uma expressão lógica, considerada como a <em>condição</em>, cujo resultado determina a execução dos comandos associados. Observe o fluxograma exibido na Figura <a href="decis.html#fig:06-01">6.1</a>.</p>
+<div class="figure"><span id="fig:06-01"></span>
+<img src="images/06-01.jpg" alt="Fluxograma da decisão simples"  />
+<p class="caption">
+Figura 6.1: Fluxograma da decisão simples
+</p>
+</div>
+<p>A diretiva <code>if</code> é iniciada pela avaliação da condição, que deve ser uma expressão de tipo <code>bool</code> (lógico), ou que possa ser avaliada logicamente. Quando a condição é avaliada como <code>True</code>, os comandos associados são executados sequencialmente; mas quando produz um resultado <code>False</code>, ocorre um desvio e a execução do programa continua com o comando seguinte à diretiva <code>if</code>. Isto significa que se a condição é avaliada como falsa, nenhum dos comandos associados é executado.</p>
+<p>Podem ser associados um ou mais comandos à diretiva <code>if</code>, desde que indentados de quatro espaços à direita, que é o padrão do Python. Observe que existe um dois-pontos <code>:</code> obrigatório após a condição, tal como nas diretivas <code>while</code> e <code>for</code>.</p>
+<p>A condição utilizada pelo <code>if</code> pode ser uma expressão aritmética simples, cujo resultado será considerado <code>False</code> apenas quando resultar em zero, ou seja, qualquer valor diferente de zero, positivo ou negativo, é tomado como <code>True</code>. Também são válidas expressões aritméticas combinadas com operadores relacionais, que são consideradas expressões lógicas devido seu resultado de tipo <code>bool</code>, ou expressões compostas, combinando várias expressões aritméticas e relacionais com o uso de operadores lógicos, que também produzem resultado <code>bool</code>.</p>
+<table>
+<colgroup>
+<col width="11%" />
+<col width="88%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><img src="images/do.png" alt="DO" /></th>
+<th align="left">É uma boa prática de programação utilizar como <em>condição</em> indicada no <code>if</code> expressões que resultem o tipo <code>bool</code>, explicitando qualquer comparação desejada, evitando o uso de operações implícitas. Isto traz mais clareza ao código e facilita sua manutenção.</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>Observe o fragmento que segue, onde a variável <code>valor</code> é <em>testada</em> pela diretiva <code>if</code>, isto é, seu conteúdo é avaliado logicamente. Como contém o inteiro <code>33</code>, um valor não nulo, é considerada <code>True</code>, de maneira que a função <code>print()</code>, associado ao <code>if</code>, é executada, produzindo sua mensagem.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="decis.html#cb1-1" aria-hidden="true" tabindex="-1"></a>valor <span class="op">=</span> <span class="dv">33</span></span>
+<span id="cb1-2"><a href="decis.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> valor:</span>
+<span id="cb1-3"><a href="decis.html#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Valor contém&#39;</span>, valor, <span class="st">&#39;que é NÃO NULO&#39;</span>)</span></code></pre></div>
+<pre><code>&gt;&gt;&gt; Valor contém 33 que é NÃO NULO</code></pre>
 </div>
 <div id="decis-if-else" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Decisão Completa</h2>
@@ -326,20 +367,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
